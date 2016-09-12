@@ -14,7 +14,7 @@ public class InitializationLab2test {
 
 
     @Test
-    public void  addColorThingTest () {
+    public void addColorThingTest() {
         ThingContainer containTest = new ThingContainer(1);
         ColorfulThing c1 = new ColorfulThing(ColorfulThing.Color.BLUE);
         ColorfulThing c2 = new ColorfulThing(ColorfulThing.Color.RED);
@@ -24,34 +24,32 @@ public class InitializationLab2test {
     }
 
     @Test
-    public void  removeTest () {
+    public void removeTest() {//searches and removes the enum color
         ThingContainer removeTest = new ThingContainer(5);
         ColorfulThing c1 = new ColorfulThing(ColorfulThing.Color.BLUE);
         ColorfulThing c2 = new ColorfulThing(ColorfulThing.Color.RED);
         removeTest.addColorfulThing(c1);
         removeTest.addColorfulThing(c2);
 
-        assertEquals("the value removed should be blue" , c1, removeTest.remove(ColorfulThing.Color.BLUE));
+        assertEquals("the value removed should be blue", c1, removeTest.remove(ColorfulThing.Color.BLUE));
 
 
     }
 
     @Test
-    public void  removeO () {
+    public void removeO() {//searches and removes the object c1
         ThingContainer removeO = new ThingContainer(5);
-        ColorfulThing c1 = new ColorfulThing();
+        ColorfulThing c1 = new ColorfulThing(ColorfulThing.Color.BLACK);
         ColorfulThing c2 = new ColorfulThing(ColorfulThing.Color.RED);
         removeO.addColorfulThing(c1);
         removeO.addColorfulThing(c2);
 
-        assertEquals("the value removed should be blue" , c1, removeO.remove(ColorfulThing.);
-
-
+        assertEquals("the value removed should be black", c1, removeO.remove(c1));
 
 
     }
-
 }
+
 
 
 

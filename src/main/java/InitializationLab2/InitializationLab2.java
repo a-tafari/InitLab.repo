@@ -32,6 +32,12 @@ public class InitializationLab2 {
         tc.printThings();
         tc.remove(ColorfulThing.Color.BLACK);
         tc.printThings();
+        System.out.println("_______________________");
+
+        ThingContainer tc2 = new ThingContainer(tc.getArrayOfColorfulThings());//created a new thing container that accepts an array from tc's getarrayofcolorfulthings method
+        tc2.printThings();
+
+
     }// end Main
 
 

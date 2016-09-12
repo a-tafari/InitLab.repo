@@ -78,7 +78,17 @@ public ColorfulThing remove (ColorfulThing c1 ) {
         return arrayOfColorfulThings;
     }
 
+public ThingContainer (ColorfulThing[] array) { // new constructor that takes an array of Colorfulthing called array
 
+    this.arrayOfColorfulThings = new ColorfulThing[array.length];// initializes this arrayofcolorfulthings to equal the size of the array argument
+
+    for ( int i = 0 ; i < array.length; i++){// for loop iterates through the array size
+
+        this.arrayOfColorfulThings[i] = array[i];//setting value of the arrayofcolorfulthings to the value from the new array
+    }
+
+
+}
 
 
     public void printThings(){
